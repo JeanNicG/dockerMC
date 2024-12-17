@@ -1,0 +1,13 @@
+services:
+  mc-server:
+    container_name: mc-server-jn
+    image: mc-server-jn
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
+    stdin_open: true
+    ports:
+      - "25565:25565"
+    volumes:
+      - mcVolume:/minecraft
